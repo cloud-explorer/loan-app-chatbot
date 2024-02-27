@@ -1,0 +1,82 @@
+{"openapi": "3.0.0",
+    "info": {
+        "title": "Create Loan Automation API",
+        "version": "1.0.0",
+        "description": "API for creating new loan application for a mortgage loan."
+    },
+    "paths": {
+        "/create-loan": {
+            "post": {
+                "summary": "Create a new loan application for a mortgage loan specific to a MLS listing",
+                "description": "Create a new loan application (MLS listing ID is required), then update the database with the new loan. Return the newly created loan's Id and list of pending documents in comma-separated plaintext.",
+                "operationId": "createLoan",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "mls_id": {
+                                        "type": "string",
+                                        "description": "Unique ID of the property in MLS."
+                                    },
+                                    "income": {
+                                        "type": "number",
+                                        "description": "The borrower's yearly income in dollars"
+                                    },
+                                    "total_debt": {
+                                        "type": "number",
+                                        "description": "The borrower's total debts or liabilities in dollars"
+                                    },
+                                    "loan_amount": {
+                                        "type": "number",
+                                        "description": "The total amount the borrower wants to borrow"
+                                    }
+                                },
+                                "required": [
+                                    "income",
+                                    "total_debt",
+                                    "loan_amount"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Creates a new loan application for a mortgage loan",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "loanId": {
+                                            "type": "string",
+                                            "description": "Unique ID of the loan."
+                                        },
+                                        "mls_id": {
+                                            "type": "string",
+                                            "description": "Unique ID of the property in MLS."
+                                        },
+                                        "status": {
+                                            "type": "string",
+                                            "description": "The status of the Loan. Lan can be in Approved, Pending or Rejected state."
+                                        },
+                                        "pendingDocuments": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            },
+                                            "description": "List of pending documents required for the loan."
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

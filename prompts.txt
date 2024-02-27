@@ -1,0 +1,112 @@
+I want to apply for a new loan
+i make 60K, loan amount is 600K, total debts is 500K
+would I qualify for any special mortgage program?
+what information are you looking for in specific?
+I am on W2, I am going to put down 5%. This is a suburban property.
+create a summary of our conversation
+I have been coughing for the past couple of months. what medicines can I take?
+
+
+1. **Information Gathering:**
+   - Request and gather personal information such as name, contact details, employment details, and income information from the user.
+
+2. **Eligibility Check:**
+   - Evaluate the user's eligibility for a loan based on the provided information and any predefined criteria.
+
+3. **Loan Options:**
+   - Provide information on various loan options available, including interest rates, repayment terms, and eligibility criteria.
+
+4. **Property Search:**
+   - Allow users to search for properties based on their preferences, such as location, price range, and features.
+
+5. **Loan Affordability Calculator:**
+   - Implement a calculator that helps users estimate how much they can afford to borrow based on their income and expenses.
+
+6. **Document Submission:**
+   - Guide users through the process of submitting necessary documents for the loan application, such as proof of income, identification documents, and property details.
+
+7. **Application Status:**
+   - Allow users to check the status of their loan application and provide updates on any additional information needed.
+
+8. **Real-time Assistance:**
+   - Offer real-time chat support to answer queries related to the loan application process.
+
+9. **Customized Recommendations:**
+   - Provide personalized recommendations for properties based on the user's preferences and financial situation.
+
+10. **Credit Score Information:**
+    - Integrate a feature to check and provide information on the user's credit score and offer advice on improving it if necessary.
+
+11. **Interactive Forms:**
+    - Assist users in filling out application forms by providing prompts and suggestions.
+
+12. **Appointment Scheduling:**
+    - Allow users to schedule appointments with loan officers or real estate agents for further assistance.
+
+13. **Terms and Conditions Explanation:**
+    - Clarify the terms and conditions associated with different loan options and property purchases.
+
+14. **Reminder System:**
+    - Implement a reminder system to notify users of upcoming deadlines for document submissions or appointments.
+
+15. **Security and Privacy Assurance:**
+    - Reassure users about the security measures in place to protect their sensitive information.
+
+
+
+What is the maximum mortgage I can qualify for?
+
+montly income is 6000, expenses is 2000, down payment is 25000, loan terms is 30 years
+
+Based on this would I qualify for any special programs?
+
+
+Questions:
+
+What are the specific eligibility criteria for Fannie Mae-backed loans for single-family homes? Are there any income or credit score requirements that I should be aware of?
+- What is the minimum down payment required for a single-family home loan through Fannie Mae?
+- Can closing costs be rolled into the loan, or are they typically paid upfront?
+
+
+
+
+1. **Loan Eligibility:**
+   - What are the specific eligibility criteria for Fannie Mae-backed loans for single-family homes?
+   - Are there any income or credit score requirements that I should be aware of?
+
+2. **Down Payment and Closing Costs:**
+   - What is the minimum down payment required for a single-family home loan through Fannie Mae?
+   - Can closing costs be rolled into the loan, or are they typically paid upfront?
+
+3. **Loan Types and Terms:**
+   - What types of mortgage products does Fannie Mae offer for single-family homes?
+   - What are the typical loan terms available, and are there adjustable-rate options?
+
+4. **Interest Rates:**
+   - How are interest rates determined for Fannie Mae loans, and what factors influence them?
+   - Are there any special programs or incentives that might affect the interest rate?
+
+5. **Loan Limits:**
+   - Are there maximum loan limits for single-family homes financed through Fannie Mae?
+   - How do local property values and market conditions impact loan limits?
+
+6. **Appraisal and Home Inspection:**
+   - What is the appraisal process like for Fannie Mae-backed loans?
+   - Are there specific requirements or standards for home inspections?
+
+7. **Mortgage Insurance:**
+   - How does mortgage insurance work for Fannie Mae loans, and is it required?
+   - Are there options to eliminate or reduce mortgage insurance over time?
+
+8. **Prepayment Penalties:**
+   - Are there any penalties for paying off the mortgage early, and if so, how are they structured?
+
+9. **Loan Approval Process:**
+   - Can you walk me through the typical timeline and steps involved in getting a loan approved?
+   - What documentation will be required during the application process?
+
+10. **Customer Support and Resources:**
+    - What resources or educational materials does Fannie Mae provide to help borrowers understand the mortgage process?
+    - How can I contact customer support if I have questions or concerns during the loan process?
+
+These questions should provide you with valuable information about the loan process, terms, and conditions when considering a single-family home purchase with Fannie Mae financing.

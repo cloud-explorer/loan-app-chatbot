@@ -21,14 +21,6 @@ Parameters:
     Description: S3 Key for create mls_lookup function code
     Type: String
     Default: /agent/lambda/action-groups/mls_lookup.zip
-  GatherEvidenceKey:
-    Description: S3 Key for gather evidence function code
-    Type: String
-    Default: /agent/lambda/action-groups/gather_evidence.zip
-  SendReminderKey:
-    Description: S3 Key for send reminder function code
-    Type: String
-    Default: /agent/lambda/action-groups/send_reminder.zip
   BedrockAgentsLayerArn:
     Description: Agents for Bedrock Lambda Layer
     Type: String
@@ -145,20 +137,6 @@ Resources:
       FunctionName: !Ref MLSLookupFunction
       Principal: 'bedrock.amazonaws.com'
 
-  BedrockSendReminderFunctionPermission:
-    Type: 'AWS::Lambda::Permission'
-    Properties:
-      Action: 'lambda:InvokeFunction'
-      FunctionName: !Ref SendReminderFunction
-      Principal: 'bedrock.amazonaws.com'
-
-  BedrockGatherEvidenceFunctionPermission:
-    Type: 'AWS::Lambda::Permission'
-    Properties:
-      Action: 'lambda:InvokeFunction'
-      FunctionName: !Ref GatherEvidenceFunction
-      Principal: 'bedrock.amazonaws.com'
-
   DataLoaderFunction:
     Type: AWS::Lambda::Function
     Properties:
@@ -252,51 +230,6 @@ Resources:
           CUSTOMER_WEBSITE_URL: !Ref EvidenceUploadUrl
           PROPERTY_TABLE_NAME: !Ref PropertyListingTable
           LOAN_TABLE_NAME: !Ref LoanTable
-          SNS_TOPIC_ARN: !Ref SNSTopic
-
-  SendReminderFunction:
-    Type: AWS::Lambda::Function
-    Properties:
-      Description: Bedrock Insurance agent send reminder function
-      FunctionName: !Sub ${AWS::StackName}-SendReminderFunction
-      Code:
-        S3Bucket: !Ref ArtifactBucket
-        S3Key: !Ref SendReminderKey
-      Runtime: python3.11
-      MemorySize: 512
-      Timeout: 30
-      Handler: send_reminder.lambda_handler
-      Layers:
-        - !Ref BedrockAgentsLayerArn
-      Role: !GetAtt AgentActionGroupLambdaRole.Arn
-      Architectures:
-        - arm64
-      Environment:
-        Variables:
-          PROPERTY_TABLE_NAME: !Ref PropertyListingTable
-          LOAN_TABLE_NAME: !Ref LoanTable
-          SNS_TOPIC_ARN: !Ref SNSTopic
-
-  GatherEvidenceFunction:
-    Type: AWS::Lambda::Function
-    Properties:
-      Description: Bedrock Insurance agent gather evidence function.
-      FunctionName: !Sub ${AWS::StackName}-GatherEvidenceFunction
-      Code:
-        S3Bucket: !Ref ArtifactBucket
-        S3Key: !Ref GatherEvidenceKey
-      Runtime: python3.11
-      MemorySize: 512
-      Timeout: 30
-      Handler: gather_evidence.lambda_handler
-      Layers:
-        - !Ref BedrockAgentsLayerArn
-      Role: !GetAtt AgentActionGroupLambdaRole.Arn
-      Architectures:
-        - arm64
-      Environment:
-        Variables:
-          CUSTOMER_WEBSITE_URL: !Ref EvidenceUploadUrl
           SNS_TOPIC_ARN: !Ref SNSTopic
 
   SNSTopic:
